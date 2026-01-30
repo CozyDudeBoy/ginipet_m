@@ -33,7 +33,7 @@ function Join(props) {
 
   // 4. 아이디 중복체크 기능 
   const checkUsername=()=>{
-    axios.post('http://localhost:9070/check-username',{
+    axios.post('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/check-username',{
       username:form.username
     })
     .then(res=>{
@@ -60,7 +60,7 @@ function Join(props) {
     }
 
     // 비밀번호가 일치하면 서버측으로 내용을 전송 
-    axios.post('http://localhost:9070/register', form)
+    axios.post('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/register', form)
     .then(()=>{//전송 성공시
       alert('회원가입이 완료되었습니다. 로그인 페이지로 이동합니다');
       navigate('/login'); //로그인 경로 주소
@@ -116,5 +116,6 @@ function Join(props) {
     </main>
   );
 }
+
 
 export default Join;
