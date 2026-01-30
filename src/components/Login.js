@@ -43,7 +43,7 @@ function Login(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('http://localhost:9070/login', form)
+    axios.post('https://port-0-backend-express-server-mkvwe63p223f9070.sel3.cloudtype.app/login', form)
       .then(res => {
         // 토큰 저장
         localStorage.setItem('token', res.data.token);
@@ -115,4 +115,5 @@ function Login(props) {
   );
 
 }
+
 export default Login;
